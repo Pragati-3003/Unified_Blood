@@ -1,6 +1,6 @@
 import React from 'react'
 import EventCard from './EventCard';
-
+import Topbar from '../../components/topbar/Topbar';
 const Event = () => {
     const eventss = [
         {
@@ -47,7 +47,9 @@ const Event = () => {
           },
       ];
   return (
-    <div className="blood-donation-events">
+    <>
+    <Topbar/>
+     <div className="blood-donation-events">
       <h2>Blood Donation Events</h2>
       {eventss.map((event, index) => (
         <EventCard
@@ -60,6 +62,8 @@ const Event = () => {
         />
       ))}
     </div>
+    </>
+   
   )
 }
 
