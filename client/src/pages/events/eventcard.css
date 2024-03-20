@@ -1,0 +1,25 @@
+/* EventsComponent.css */
+.events-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .event-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .event-card h3 {
+    color: #333;
+  }
+  
+  .event-card p {
+    margin: 10px 0;
+  }
+  
+  /* Add more CSS styles as needed */
+  
