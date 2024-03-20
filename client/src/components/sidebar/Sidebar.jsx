@@ -1,4 +1,5 @@
 import "./sidebar.css";
+import Messenger from '../../pages/messenger/Messenger'
 import {
   RssFeed,
   Chat,
@@ -7,11 +8,12 @@ import {
   Bookmark,
   HelpOutline,
   WorkOutline,
-  Event,
-  School,
+  // Event,
+  // School,
 } from "@material-ui/icons";
-import { Users } from "../../dummyData";
-import CloseFriend from "../closeFriend/CloseFriend";
+// import { Users } from "../../dummyData";
+// import CloseFriend from "../closeFriend/CloseFriend";
+import { Link } from 'react-router-dom';
 
 export default function Sidebar() {
   return (
@@ -24,7 +26,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarListItem">
             <Chat className="sidebarIcon" />
-            <span className="sidebarListItemText">Events</span>
+            <span className="sidebarListItemText"><Link to="/events" style={{textDecoration:'none' , color:'black'}}>Events</Link> </span>
           </li>
           <li className="sidebarListItem">
             <PlayCircleFilledOutlined className="sidebarIcon" />
@@ -40,7 +42,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarListItem">
             <HelpOutline className="sidebarIcon" />
-            <span className="sidebarListItemText">Messaging</span>
+            <span className="sidebarListItemText">  <Link to="/messenger" style={{textDecoration:'none' , color:'black'}}>Messaging</Link> </span>
           </li>
           <li className="sidebarListItem">
             <WorkOutline className="sidebarIcon" />
