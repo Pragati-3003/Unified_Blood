@@ -5,6 +5,7 @@ import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Registerr from "./pages/register/Registerr";
 import Messenger from "./pages/messenger/Messenger";
+import Event from "./pages/events/Event";
 import {
   BrowserRouter as Router,
   Routes,
@@ -22,6 +23,7 @@ function App() {
         <Route path="/register" element={user ? <Navigate to="/" /> : <Registerr />} />
         <Route path='/messenger' element={!user ? <Navigate to="/" /> : <Messenger />}  />
         <Route path="/profile/:username" element={<Profile />} />
+        <Route path="/events" element={!user ? <Navigate to="/" /> : <Event />} />
      </Routes>
     </Router>
   );
