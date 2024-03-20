@@ -52,19 +52,19 @@ export default function Rightbar({ user }) {
     return (
       <>
         <div className="birthdayContainer">
-          <img className="birthdayImg" src="assets/gift.png" alt="" />
+          <img className="birthdayImg" src="assets/blood_images/blood_drop.png" alt="" />
           <span className="birthdayText">
            <b>Manav Seva Trust Rajasthan </b>  is organizing a blood donation camp.
           </span>
         </div>
-        <img className="rightbarAd" src="assets/ad.png" alt="" />
+        <img className="rightbarAd" src="assets/blood_images/You_Give_They_Live.jpeg" alt="" />
         <div className="birthdayContainer">
-          <img className="birthdayImg" src="assets/gift.png" alt="" />
+          <img className="birthdayImg" src="assets/blood_images/blood_drop.png" alt="" />
           <span className="birthdayText">
            <b>Manav Seva Trust Rajasthan </b>  is organizing a blood donation camp.
           </span>
         </div>
-        <img className="rightbarAd" src="assets/ad.png" alt="" />
+        <img className="rightbarAd" src="assets/rightbar_not.png" alt="" />
         {/* <h4 className="rightbarTitle">onine Friends</h4> */}
         <ul className="rightbarFriendList">
           {/* {Users.map((u) => (
