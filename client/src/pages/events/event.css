@@ -1,0 +1,27 @@
+.blood-donation-events-heading{
+    text-align: center;
+    padding: 10px;
+    color: white;
+   align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+   
+}
+.event-card{
+    
+    
+}
+.blood-donation-events{
+    background: url("../../../public/assets/blood_images/blood-cells.webp") no-repeat center center/cover;
+    background-attachment: fixed;
+    z-index: -1;
+    opacity: 0.90;
+    
+   
+}
+.blood-donation-heading{
+    height:50px;
+    width:50px;
+
+}
