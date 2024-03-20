@@ -10,9 +10,18 @@ export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
+      <div className="logoImg">
+        <div>
+        <img src="assets/topbar/LOGO_UNIFIED_BLOOD.png" alt="" className="srcLOGO" />
+        </div>
+        <div className="logoname">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Unified Blood</span>
+            <span className="logo">UnifiedBlood</span>
         </Link>
+       </div>
+
+      </div>
+        
       </div>
       <div className="topbarCenter">
         <div className="searchbar">
