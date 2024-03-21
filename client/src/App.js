@@ -6,6 +6,8 @@ import Profile from "./pages/profile/Profile";
 import Registerr from "./pages/register/Registerr";
 import Messenger from "./pages/messenger/Messenger";
 import Event from "./pages/events/Event";
+import Ngos from "./pages/NGOS/Ngos";
+import BloodBanks from "./pages/bloodbanks/BloodBanks";
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,6 +26,8 @@ function App() {
         <Route path='/messenger' element={!user ? <Navigate to="/" /> : <Messenger />}  />
         <Route path="/profile/:username" element={<Profile />} />
         <Route path="/events" element={!user ? <Navigate to="/" /> : <Event />} />
+        <Route path="/ngos" element={!user ? <Navigate to="/" /> : <Ngos/>} />
+        <Route path="/bloodbanks" element={!user ? <Navigate to="/" /> : <BloodBanks />} />
      </Routes>
     </Router>
   );
