@@ -1,5 +1,5 @@
 import "./sidebar.css";
-import Messenger from '../../pages/messenger/Messenger'
+// import Messenger from '../../pages/messenger/Messenger'
 import {
   RssFeed,
   Chat,
@@ -34,11 +34,11 @@ export default function Sidebar() {
           </li>
           <li className="sidebarListItem">
             <Group className="sidebarIcon" />
-            <span className="sidebarListItemText">NGO's</span>
+            <span className="sidebarListItemText"><Link to="/ngos" style={{textDecoration:'none' , color:'black'}}>NGO's</Link></span>
           </li>
           <li className="sidebarListItem">
             <Bookmark className="sidebarIcon" />
-            <span className="sidebarListItemText">Blood Banks</span>
+            <span className="sidebarListItemText"><Link to="/bloodbanks" style={{textDecoration:'none' , color:'black'}}>Blood Banks</Link></span>
           </li>
           <li className="sidebarListItem">
             <HelpOutline className="sidebarIcon" />
