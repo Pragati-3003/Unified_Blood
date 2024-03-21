@@ -1,33 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import './bloodbanks.css';
+import React, { useState } from 'react';
+import './bloodbanks.css'
+
+import Topbar from '../../components/topbar/Topbar';
 
 const BloodBanks = () => {
   const [selectedLocation, setSelectedLocation] = useState('');
   const [details, setDetails] = useState(null);
 
-  useEffect(() => {
-    if (selectedLocation) {
-      // Fetch details based on the selected location
-      fetchDetails(selectedLocation);
-    }
-  }, [selectedLocation]);
-
-  const fetchDetails = (location) => {
-    // Call your API to fetch blood bank details for the given location
-    // Replace 'YOUR_API_ENDPOINT' with the actual endpoint of your API
-    fetch(`YOUR_API_ENDPOINT?location=${location}`)
-      .then(response => response.json())
-      .then(data => {
-        // Assuming the API response contains the blood bank details
-        setDetails(data);
-      })
-      .catch(error => {
-        console.error('Error fetching blood bank details:', error);
-      });
-  };
-
   const handleLocationChange = (location) => {
     setSelectedLocation(location);
+    // Fetch details based on the selected location
+    fetchDetails(location);
+  };
+
+  const fetchDetails = (location) => {
+    // Simulated function to fetch details based on location
+    // Replace with actual API call
+    const details = {
+      location: location,
+      // Example data
+      bloodTypeA: "Smart City Blood Bank",
+      bloodTypeB: "Indian Blood Bank",
+      bloodTypeAB: "State Blood Bank",
+      bloodTypeO: "Health Care Blood Bank",
+    };
+    setDetails(details);
   };
 
   const handleCurrentLocation = () => {
@@ -39,7 +36,9 @@ const BloodBanks = () => {
           // You can use these coordinates to fetch details or display them
           console.log("Latitude:", latitude, "Longitude:", longitude);
           // Simulated location detection
-          setSelectedLocation("Your Current Location");
+          setSelectedLocation("Banasthali Vidyapith");
+          // Fetch details based on the detected location
+          fetchDetails("Your Current Location");
         },
         (error) => {
           console.error("Error getting location:", error.message);
@@ -54,11 +53,12 @@ const BloodBanks = () => {
 
   return (
     <div>
+      <Topbar/>
       <nav>
         <ul>
-          <li><a href="#" onClick={() => handleLocationChange('Jaipur')}>Jaipur</a></li>
-          <li><a href="#" onClick={() => handleLocationChange('Kota')}>Kota</a></li>
-          <li><a href="#" onClick={() => handleLocationChange('Delhi')}>Delhi</a></li>
+          <li><a href="#" onClick={() => handleLocationChange('Location A')}>Jaipur</a></li>
+          <li><a href="#" onClick={() => handleLocationChange('Location B')}>Kota</a></li>
+          <li><a href="#" onClick={() => handleLocationChange('Location C')}>Delhi</a></li>
           {/* Add more locations as needed */}
         </ul>
         <button onClick={handleCurrentLocation}>Detect Current Location</button>
@@ -67,20 +67,16 @@ const BloodBanks = () => {
         <h2>Blood Bank Details for {selectedLocation}</h2>
         {details && (
           <div>
-            {/* Display blood bank details */}
-            {details.map((bank, index) => (
-              <div key={index}>
-                <p>Name: {bank.name}</p>
-                <p>Address: {bank.address}</p>
-                <p>Contact: {bank.contact}</p>
-                {/* Add more details as needed */}
-              </div>
-            ))}
+            <p>Blood Bank : {details.bloodTypeA}</p>
+            <p>Blood Bank : {details.bloodTypeB}</p>
+            <p>Blood Bank : {details.bloodTypeAB}</p>
+            <p>Blood BAnk : {details.bloodTypeO}</p>
+            {/* Add more details as needed */}
           </div>
         )}
       </div>
     </div>
   );
-};
+}
 
-export default BloodBanks;
+export default BloodBanks
