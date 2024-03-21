@@ -1,5 +1,7 @@
 import React from 'react'
 import EventCard from './EventCard';
+import Topbar from '../../components/topbar/Topbar';
+import "./event.css";
 
 const Event = () => {
     const eventss = [
@@ -47,8 +49,15 @@ const Event = () => {
           },
       ];
   return (
-    <div className="blood-donation-events">
-      <h2>Blood Donation Events</h2>
+    <>
+    <Topbar/>
+     <div className="blood-donation-events">
+      <section className="blood-donation-events-heading">
+   
+      <h2 >Blood Donation Events</h2>
+      <h5>Bridging Gaps in Blood Donation Ecosystem</h5>
+      </section>
+     
       {eventss.map((event, index) => (
         <EventCard
           key={index}
@@ -60,6 +69,8 @@ const Event = () => {
         />
       ))}
     </div>
+    </>
+   
   )
 }
 
