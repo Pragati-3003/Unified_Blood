@@ -82,3 +82,12 @@
   font-weight: 500;
   cursor: pointer;
 }
+
+.loginLogo{
+  display:flex;
+}
+.login_logo_img
+{
+  height:30px;
+  width:30px;
+}

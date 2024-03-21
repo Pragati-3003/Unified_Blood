@@ -1,0 +1,32 @@
+.blood-donation-events-heading{
+    text-align: center;
+    padding: 10px;
+    color: white;
+   align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+   
+}
+
+.ngos-events{
+    background: url("../../../public/assets/blood_images/red-blood-cells-2.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    z-index: -1;
+    opacity: 0.90;
+    
+   
+}
+.ngos-heading{
+    align-items: center;
+   color: aliceblue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.ngos-heading h2{
+    
+    font-size: 34px;
+}
+.ngos-container{
+    display: flex;
+}
