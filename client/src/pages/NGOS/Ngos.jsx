@@ -55,6 +55,18 @@ const Ngos = () => {
       <section className="ngos-heading">   
       <h2 className="Ngo-event-heading">Ngo's Details</h2>
       </section>  
+      <div className="section-mail">
+        <div className="want-reg">
+          <h3>Want to Register Send Us Mail</h3>
+        </div> 
+        <div className="click-me">
+          <button className="Click-me-button">
+             <a href="mailto:someone@example.com"></a>
+             Click Me
+          </button>
+          
+          </div>      
+     </div>
       <div className="ngos-container">
         {ngoss.map((event, index) => (
         <Ngoscard

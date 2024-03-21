@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     font-size: 50px;
-   
+   border : 2px solid 
 }
 
 .ngos-events{
@@ -29,4 +29,10 @@
 }
 .ngos-container{
     display: flex;
+    margin-top: 50px;
+}
+.Ngo-event-heading
+{
+    margin-bottom: 40px;
+    padding-top: 10px;
 }
