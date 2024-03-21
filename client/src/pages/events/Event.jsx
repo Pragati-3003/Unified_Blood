@@ -52,13 +52,26 @@ const Event = () => {
     <>
     <Topbar/>
      <div className="blood-donation-events">
-      <section className="blood-donation-events-heading">
-   
-      <h2 >Blood Donation Events</h2>
-      <h5>Bridging Gaps in Blood Donation Ecosystem</h5>
+      <section className="blood-donation-events-heading">  
+            <h2 >Blood Donation Events</h2>
+            
       </section>
      
-      {eventss.map((event, index) => (
+      <div className="section-mail">
+        <div className="want-reg">
+          <h3>Want to Register Send Us Mail</h3>
+        </div> 
+        <div className="click-me">
+          <button className="Click-me-button">
+             <a href="mailto:someone@example.com"></a>
+             Click Me
+          </button>
+          
+          </div>      
+     
+      </div>  
+      <div className="event-container">
+        {eventss.map((event, index) => (
         <EventCard
           key={index}
           eventName={event.eventName}
@@ -68,6 +81,8 @@ const Event = () => {
           contactInfo={event.contactInfo}
         />
       ))}
+        </div>   
+      
     </div>
     </>
    

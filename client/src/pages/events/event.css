@@ -1,27 +1,58 @@
 .blood-donation-events-heading{
-    text-align: center;
+    
+    
     padding: 10px;
     color: white;
-   align-items: center;
+    align-items: center;
     display: flex;
     justify-content: center;
-    font-size: 50px;
-   
+    font-size: 100px;
+    margin-left: 10px;
 }
-.event-card{
-    
-    
-}
+
 .blood-donation-events{
     background: url("../../../public/assets/blood_images/blood-cells.webp") no-repeat center center/cover;
     background-attachment: fixed;
     z-index: -1;
     opacity: 0.90;
-    
    
 }
-.blood-donation-heading{
-    height:50px;
-    width:50px;
+.blood-donation-events-heading h2{
+    font-size: 50px;
+}
+.section-mail a
+{
+    justify-content: center;    
+    right: 10px;
+    border-radius: 500px;   
+}
+.want-reg{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+.want-reg a{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+.click-me
+{
+    justify-content: center;
+    position: fixed;
+      right: 200px;
+    border-radius: 500px;
+    margin-bottom: 50px;
+
 
 }
+.Click-me-button
+{
+  
+   text-decoration: none;
+  
+   font-size: 16px;
+   color: #641b03;
+   background-color: aliceblue;
+}
+
