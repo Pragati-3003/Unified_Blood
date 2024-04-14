@@ -19,10 +19,54 @@ const BloodBanks = () => {
     const details = {
       location: location,
       // Example data
-      bloodTypeA: "Smart City Blood Bank",
-      bloodTypeB: "Indian Blood Bank",
-      bloodTypeAB: "State Blood Bank",
-      bloodTypeO: "Health Care Blood Bank",
+      bloodTypeA: {
+        bank: "Smart City Blood Bank",
+        bloodAvailable: "100 units",
+        typesAvailable: ["A+", "A-", "AB+", "AB-"],
+        contact: "+1234567890"
+      },
+      bloodTypeB: {
+        bank: "Indian Blood Bank",
+        bloodAvailable: "150 units",
+        typesAvailable: ["B+", "B-"],
+        contact: "+9876543210"
+      },
+      bloodTypeAB: {
+        bank: "State Blood Bank",
+        bloodAvailable: "80 units",
+        typesAvailable: ["AB+", "AB-"],
+        contact: "+1122334455"
+      },
+      bloodTypeO: {
+        bank: "Health Care Blood Bank",
+        bloodAvailable: "200 units",
+        typesAvailable: ["O+", "O-"],
+        contact: "+9988776655"
+      },
+      bloodTypeAaa: {
+        bank: "Smart City Blood Bank",
+        bloodAvailable: "100 units",
+        typesAvailable: ["A+", "A-", "AB+", "AB-"],
+        contact: "+1234567890"
+      },
+      bloodTypebB: {
+        bank: "Indian Blood Bank",
+        bloodAvailable: "150 units",
+        typesAvailable: ["B+", "B-"],
+        contact: "+9876543210"
+      },
+      bloodTypeAbB: {
+        bank: "State Blood Bank",
+        bloodAvailable: "80 units",
+        typesAvailable: ["AB+", "AB-"],
+        contact: "+1122334455"
+      },
+      bloodTypeOnn: {
+        bank: "Health Care Blood Bank",
+        bloodAvailable: "200 units",
+        typesAvailable: ["O+", "O-"],
+        contact: "+9988776655"
+      },
     };
     setDetails(details);
   };
@@ -56,22 +100,29 @@ const BloodBanks = () => {
       <Topbar/>
       <nav>
         <ul>
-          <li><a href="#" onClick={() => handleLocationChange('Location A')}>Jaipur</a></li>
-          <li><a href="#" onClick={() => handleLocationChange('Location B')}>Kota</a></li>
-          <li><a href="#" onClick={() => handleLocationChange('Location C')}>Delhi</a></li>
+          <li><a href="#" onClick={() => handleLocationChange('Jaipur')}>Jaipur</a></li>
+          <li><a href="#" onClick={() => handleLocationChange('Kota')}>Kota</a></li>
+          <li><a href="#" onClick={() => handleLocationChange('Delhi')}>Delhi</a></li>
           {/* Add more locations as needed */}
         </ul>
         <button onClick={handleCurrentLocation}>Detect Current Location</button>
       </nav>
-      <div>
+      <div className="container">
         <h2>Blood Bank Details for {selectedLocation}</h2>
         {details && (
-          <div>
-            <p>Blood Bank : {details.bloodTypeA}</p>
-            <p>Blood Bank : {details.bloodTypeB}</p>
-            <p>Blood Bank : {details.bloodTypeAB}</p>
-            <p>Blood BAnk : {details.bloodTypeO}</p>
-            {/* Add more details as needed */}
+          <div className="details-container">
+            {Object.keys(details).map((bloodType, index) => (
+              details[bloodType] && (
+                <div className="card" key={index}>
+                  <h3>{details[bloodType].bank}</h3>
+                  <p><strong>Blood Available:</strong> {details[bloodType].bloodAvailable}</p>
+                  {details[bloodType].typesAvailable && (
+                    <p><strong>Types Available:</strong> {details[bloodType].typesAvailable.join(", ")}</p>
+                  )}
+                  <p><strong>Contact:</strong> {details[bloodType].contact}</p>
+                </div>
+              )
+            ))}
           </div>
         )}
       </div>
@@ -79,4 +130,4 @@ const BloodBanks = () => {
   );
 }
 
-export default BloodBanks
+export default BloodBanks;

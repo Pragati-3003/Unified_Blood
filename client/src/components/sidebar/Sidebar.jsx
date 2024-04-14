@@ -45,6 +45,10 @@ export default function Sidebar() {
             <span className="sidebarListItemText">  <Link to="/messenger" style={{textDecoration:'none' , color:'black'}}>Messaging</Link> </span>
           </li>
           <li className="sidebarListItem">
+            <HelpOutline className="sidebarIcon" />
+            <span className="sidebarListItemText">  <Link to="/donars" style={{textDecoration:'none' , color:'black'}}>Donars</Link> </span>
+          </li>
+          <li className="sidebarListItem">
             <WorkOutline className="sidebarIcon" />
             <span className="sidebarListItemText">Marketplace</span>
           </li>
