@@ -31,9 +31,9 @@ function Registerr() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Lamasocial</h3>
+          <h3 className="loginLogo">Unified Blood</h3>
           <span className="loginDesc">
-            Connect with friends and the world around you on Lamasocial.
+          Bridging Gaps in Blood Donation Ecosystem.
           </span>
         </div>
         <div className="loginRight">

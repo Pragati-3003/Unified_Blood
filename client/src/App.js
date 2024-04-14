@@ -8,6 +8,8 @@ import Messenger from "./pages/messenger/Messenger";
 import Event from "./pages/events/Event";
 import Ngos from "./pages/NGOS/Ngos";
 import BloodBanks from "./pages/bloodbanks/BloodBanks";
+
+import Donar from "./pages/donors/Donar";
 import {
   BrowserRouter as Router,
   Routes,
@@ -28,6 +30,7 @@ function App() {
         <Route path="/events" element={!user ? <Navigate to="/" /> : <Event />} />
         <Route path="/ngos" element={!user ? <Navigate to="/" /> : <Ngos/>} />
         <Route path="/bloodbanks" element={!user ? <Navigate to="/" /> : <BloodBanks />} />
+        <Route path="/donars" element={!user ? <Navigate to="/" /> : <Donar />} />
      </Routes>
     </Router>
   );
